@@ -1,3 +1,10 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
 func largestSumAfterKNegations(nums []int, k int) int {
 	sort.Ints(nums)
 	for i, v := range nums {
@@ -19,3 +26,8 @@ func largestSumAfterKNegations(nums []int, k int) int {
 	return ans
 }
 
+func main() {
+	nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	k := 3
+	fmt.Println(largestSumAfterKNegations(nums, k))
+}
